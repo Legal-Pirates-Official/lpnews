@@ -7,71 +7,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categorized News</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/navbar.css">
 </head>
-    <body>
-        <%- include("partials/navbar.ejs") %>
+
+<body>
+    <%- include("partials/navbar.ejs") %>
 
 
-            <section class="news-section1">
-                <div class="main-div">
-                    <div class="left-side-content left-side-content1">
-                        <h1>Lorem</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum eaque fugiat
-                            obcaecati
-                            dolores unde autem nulla aut dolor eius nemo praesentium, rem, in odit sint quod aperiam
-                            ullam
-                            dolorem reiciendis?</p>
-                    </div>
+        <section class="news-section1">
+            <div class="main-div">
+                <div class="left-side-content left-side-content1">
+                    <h1>Lorem</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum eaque fugiat
+                        obcaecati
+                        dolores unde autem nulla aut dolor eius nemo praesentium, rem, in odit sint quod aperiam
+                        ullam
+                        dolorem reiciendis?</p>
                 </div>
-                </div>
-            </section>
+            </div>
+            </div>
+        </section>
 
 
-            <section class="news-boxes-main-div">
-                <div class="news-boxes">
-                    <% articles.forEach(function(article,index){ %>
+        <section class="news-boxes-main-div">
+            <div class="news-boxes">
+                <% articles.forEach(function(article,index){ %>
 
-                        <% if ((typeof article.url=='object' ) || (typeof article.title=='object' ) || (typeof
-                            article.urlToImage=='object' ) || (typeof article.content=='object' )){ %>
-                            <% } else{ %>
-                                <div class="boxes">
-                                    <div class="boxes-img">
-                                        <img src="<%= article.urlToImage %> " alt="">
-                                    </div>
-                                    <div class="boxes-content">
-                                        <p>
-                                            <%= article.title %>
-                                        </p>
-                                        <p>
-                                            <%= article.content %>
-                                        </p>
-                                    </div>
+                    <% if ((typeof article.url=='object' ) || (typeof article.title=='object' ) || (typeof
+                        article.urlToImage=='object' ) || (typeof article.content=='object' )){ %>
+                        <% } else{ %>
+                            <div class="boxes">
+                                <div class="boxes-img">
+                                    <img src="<%= article.urlToImage %> " alt="">
                                 </div>
-                                <% } %>
-                                    <% }) %>
+                                <div class="boxes-content">
+                                    <p>
+                                        <%= article.title %>
+                                    </p>
+                                    <p>
+                                        <%= article.content %>
+                                    </p>
+                                </div>
+                            </div>
+                            <% } %>
+                                <% }) %>
+            </div>
+            <div class="ad-sense">
+                <div class="news-category">
+                    <ul>
+                        <li><a target="_blank" href="/news/business">Business</a></li>
+                        <li><a target="_blank" href="/news/entertainment">Entertain</a></li>
+                        <li><a target="_blank" href="/news/general">General</a></li>
+                        <li><a target="_blank" href="/news/health">Health</a></li>
+                        <li><a target="_blank" href="/news/technology">Technology</a></li>
+                        <li><a target="_blank" href="/news/sports">Sports</a></li>
+                        <li><a target="_blank" href="/news/science">Science</a></li>
+                    </ul>
                 </div>
-                <div class="ad-sense">
-                    <div class="news-category">
-                        <ul>
-                            <li><a target="_blank" href="/news/business">Business</a></li>
-                            <li><a target="_blank" href="/news/entertainment">Entertain</a></li>
-                            <li><a target="_blank" href="/news/general">General</a></li>
-                            <li><a target="_blank" href="/news/health">Health</a></li>
-                            <li><a target="_blank" href="/news/technology">Technology</a></li>
-                            <li><a target="_blank" href="/news/sports">Sports</a></li>
-                            <li><a target="_blank" href="/news/science">Science</a></li>
-                        </ul>
-                    </div>
-                    <div class="ad-div"></div>
-                </div>
+                <div class="ad-div"></div>
+            </div>
 
 
 
 
-            </section>
-    </body>
+        </section>
+</body>
 
-    </html>
+</html>
