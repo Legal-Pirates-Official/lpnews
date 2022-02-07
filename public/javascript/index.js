@@ -10,10 +10,11 @@ VanillaTilt.init(document.querySelectorAll('.boxes'), {
 const newsBoxes = document.querySelector('.news-boxes');
 
 const fetchRequest = (url) => {
-	newsBoxes.innerHTML = ``;
+	newsBoxes.innerHTML = `Loading...`;
 	fetch(url)
 		.then((response) => response.json())
 		.then((data) => {
+			newsBoxes.innerHTML = ``;
 			data.articles.forEach((article) => {
 				newsBoxes.innerHTML += `
                     <div class="boxes">
