@@ -42,19 +42,19 @@ const fetchRequest = (url) => {
 addEventListener(
 	'load',
 	fetchRequest(
-		'http://newsapi.org/v2/top-headlines?country=in&apiKey=65d19618ed5f44369343808e565a89cf'
+		'https://newsapi.org/v2/top-headlines?country=in&apiKey=65d19618ed5f44369343808e565a89cf'
 	)
 );
 
 document.querySelector('.search-input').addEventListener('input', (e) => {
 	fetchRequest(
-		`http://newsapi.org/v2/everything?q=${e.target.value}&apiKey=65d19618ed5f44369343808e565a89cf`
+		`https://newsapi.org/v2/everything?q=${e.target.value}&apiKey=65d19618ed5f44369343808e565a89cf`
 	);
 });
 
 const categorySelect = (category) => {
 	fetchRequest(
-		'http://newsapi.org/v2/top-headlines?country=in&category=' +
+		'https://newsapi.org/v2/top-headlines?country=in&category=' +
 			category +
 			'&apiKey=65d19618ed5f44369343808e565a89cf'
 	);
